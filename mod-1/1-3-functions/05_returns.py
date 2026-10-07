@@ -1,14 +1,14 @@
-def add(x, y):
+def sum(x, y):
     return x + y
 
-# The value of 5 + 3 is returned, resolving to `total = 8`
-total = add(5, 3)
+# The value of 5 + 3 is returned, resolving to `result = 8`
+result = sum(5, 3)
 
 # We can now use the computed value outside of the function
-print(total)
+print(result)
 
 # Predict, then run: What does this print? In what order are the calls resolved?
-print(add(12, add(5, 3)))
+print(sum(12, sum(5, 3)))
 
 
 # Predict, then run: What does this print? There are two lines of output.

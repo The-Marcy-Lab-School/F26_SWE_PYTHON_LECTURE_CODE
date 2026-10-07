@@ -1,24 +1,23 @@
 # F26_SWE_PYTHON_LECTURE_CODE
 
-1. Fork this repo 
-2. Clone YOUR fork into your `development` folder
+## Setup
 
-``` git clone git@github.com:YOUR_USERNAME/F26_SWE_PYTHON_LECTURE_CODE.git ```
+Clone this repo into your `development` folder
 
-3. `cd` into the repo and add THIS repo as the "upstream" source (this allows you to fetch changes from a parent repo)
-
-``` git remote add upstream git@github.com:The-Marcy-Lab-School/F26_SWE_PYTHON_LECTURE_CODE.git ```
+```sh
+git clone git@github.com:The-Marcy-Lab-School/F26_SWE_PYTHON_LECTURE_CODE.git
+```
 
 ## When there are new lectures or lecture notes to fetch down
 
-4. Fetch those changes/new lectures 
+Run `git pull` at the start of a new session to get the new code
 
-```git fetch upstream```
+## If an instructor pushes changes to files that you have already edited
 
-5.  Merge the changes/new lectures into YOUR fork 
+Stash your changes, pull down the new code, and then pop your stashed files:
 
-```git merge upstream/main -m "meaningful message"```
-
-6.  Push and changes you make to lectures/notes back to YOUR fork (these will be your personal notes/changes)
-
-```git push origin main```
+```sh
+git stash
+git pull
+git stash pop
+```

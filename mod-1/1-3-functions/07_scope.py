@@ -1,3 +1,15 @@
+def print_x():
+    # x is reachable anywhere in this function
+    x = 10
+
+    print(x)
+
+print_x()
+
+# Predict, then run: What happens when you uncomment the line below?
+# print(x)
+
+
 # my_name is global. Reachable anywhere in this file.
 my_name = 'Jayson'
 
