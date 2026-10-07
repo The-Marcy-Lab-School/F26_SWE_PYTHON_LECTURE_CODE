@@ -17,7 +17,12 @@ Run `git pull` at the start of a new session to get the new code
 Stash your changes, pull down the new code, and then pop your stashed files:
 
 ```sh
+# sets aside your local un-committed changes
 git stash
+
+# pulls down remote changes
 git pull
+
+# re-applies your local changes
 git stash pop
 ```
