@@ -2,7 +2,7 @@
 
 ## Setup
 
-Clone this repo into your `development` folder
+Clone this repo into your `development` folder using the command below:
 
 ```sh
 git clone git@github.com:The-Marcy-Lab-School/F26_SWE_PYTHON_LECTURE_CODE.git
