@@ -1,5 +1,6 @@
-# Predict, then run: Type 4.50, then ten, then 10, then done. What is printed after each answer?
-# Which line stops float() from crashing on ten?
+# Predict, then run: Type 4.50, then press Enter without typing anything, then 10, then done. What is printed after each answer?
+# Which line stops float() from crashing on the blank answer?
+# For now, this program assumes that every answer is either a number, done, or blank.
 
 total = 0
 
@@ -8,9 +9,7 @@ while True:
     if amount == "done":
         break
 
-    digits = amount.replace(".", "", 1)
-    if not digits.isdigit():
-        print(f"Sorry, {amount} is not a dollar amount")
+    if amount == "":
         continue
 
     total += float(amount)

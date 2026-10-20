@@ -1,6 +1,6 @@
 # The dollar program in chapter 1.6 (../1-6-loops/14_dollar_total.py) kept only a running total.
 # This program keeps every item and every price, so it can print a receipt.
-# Run it and add a few items. Try a price that is not a number, like two.
+# Run it and add a few items.
 
 items = []
 prices = []
@@ -11,16 +11,12 @@ while True:
     if item.lower() == "done":
         break
 
-    # then we ask for the price
-    price = input(f"Price of {item}: ").strip()
-    digits = price.replace(".", "", 1)
-    if not digits.isdigit():
-        print(f"Sorry, {price} is not a price, so {item} was not added.")
-        continue
+    # then we ask for the price (for now, assume the user enters a valid number)
+    price = float(input(f"Price of {item}: "))
 
     # add the item to the items list and price to the prices list
     items.append(item)
-    prices.append(float(price))
+    prices.append(price)
 
 # Once the while loop is done collecting inputs, calculate the total and print out the receipt
 total = 0
