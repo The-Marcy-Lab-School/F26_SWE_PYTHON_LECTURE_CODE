@@ -1,4 +1,6 @@
-# Run this file and add a few items. Try a price that is not a number, like two.
+# The dollar program in chapter 1.6 (../1-6-loops/14_dollar_total.py) kept only a running total.
+# This program keeps every item and every price, so it can print a receipt.
+# Run it and add a few items. Try a price that is not a number, like two.
 
 items = []
 prices = []
