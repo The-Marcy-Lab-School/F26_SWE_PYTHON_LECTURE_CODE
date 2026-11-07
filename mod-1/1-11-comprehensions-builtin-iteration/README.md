@@ -53,7 +53,7 @@ Some sections ask you to predict the output before you run them, so read the com
 3. Run the tests before you change anything. pytest prints a `.` for each test that passed, and the last line says `3 passed`.
 
     ```sh
-    python3 -m pytest
+    pytest
     ```
 
-4. Refactor `double_all_purely` in `double_all.py` to use a list comprehension, then run `python3 -m pytest` again. If all three tests still pass, the comprehension does what the loop did.
+4. Refactor `double_all_purely` in `double_all.py` to use a list comprehension, then run `pytest` again. If all three tests still pass, the comprehension does what the loop did.

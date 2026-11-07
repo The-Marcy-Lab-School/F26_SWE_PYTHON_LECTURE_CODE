@@ -61,14 +61,14 @@ These sections of the lesson are commands, not Python files. Run them in the Ter
 5. Run the test in `test_orders.py`. pytest prints a `.` for the test that passed.
 
     ```sh
-    python3 -m pytest
+    pytest
     ```
 
 6. **Predict, then run:** Turn the environment off, then run the tests again. What happens?
 
     ```sh
     deactivate
-    python3 -m pytest
+    pytest
     ```
 
     Activate the environment again with `source .venv/bin/activate` before moving on.

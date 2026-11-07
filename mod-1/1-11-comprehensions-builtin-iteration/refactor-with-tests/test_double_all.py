@@ -1,5 +1,5 @@
 # pytest runs every function whose name starts with test_, in every file whose name starts with test_.
-# With the virtual environment activated, run it from this folder: python3 -m pytest
+# With the virtual environment activated, run it from this folder: pytest
 from double_all import double_all_purely
 
 

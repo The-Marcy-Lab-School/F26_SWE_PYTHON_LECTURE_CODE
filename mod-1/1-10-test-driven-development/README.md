@@ -35,6 +35,14 @@ Run these commands in the Terminal, one step at a time, from inside the `1-10-te
    mkdir src tests
    ```
 
+   Then create `pytest.ini` in `testing-practice` with these three lines, so that pytest can import your code from `src/`:
+
+   ```
+   [pytest]
+   pythonpath = src
+   testpaths = tests
+   ```
+
 5. Create `src/calc.py` with the `add` function from the lesson, and `tests/test_calc.py` with its first test.
 
    ```python
@@ -45,7 +53,7 @@ Run these commands in the Terminal, one step at a time, from inside the `1-10-te
 
    ```python
    # tests/test_calc.py
-   from src.calc import add
+   from calc import add
 
 
    def test_add():
@@ -57,7 +65,7 @@ Run these commands in the Terminal, one step at a time, from inside the `1-10-te
 6. Run the tests. pytest prints a `.` for the one test that passed, and the last line says `1 passed`.
 
    ```sh
-   python3 -m pytest
+   pytest
    ```
 
 The project should now look like this:
@@ -65,6 +73,7 @@ The project should now look like this:
 ```
 testing-practice/
 ├── .venv/
+├── pytest.ini
 ├── requirements.txt
 ├── src/
 │   └── calc.py
@@ -72,7 +81,7 @@ testing-practice/
     └── test_calc.py
 ```
 
-Always run `python3 -m pytest` from inside `testing-practice`, the folder that contains `src/`. Run from anywhere else and the import on the first line of every test file fails with `ModuleNotFoundError: No module named 'src'`. The lesson explains why in the hint under First Test.
+Run `pytest` from inside `testing-practice`. `pytest.ini` puts `src/` on the import path, which is what lets `from calc import add` work. Without `pytest.ini`, the import on the first line of every test file fails with `ModuleNotFoundError: No module named 'calc'`. The lesson explains why in the note under First Test.
 
 ## Files You Create During the Lesson
 
@@ -93,8 +102,8 @@ Two sections ask you to break something on purpose, read what pytest reports, an
 To run a single test file instead of all of them, give pytest its path. To see every test by name, add `-v`.
 
 ```sh
-python3 -m pytest tests/test_double_all.py
-python3 -m pytest -v
+pytest tests/test_double_all.py
+pytest -v
 ```
 
 When you are finished with the lesson, the project looks like this:
@@ -102,6 +111,7 @@ When you are finished with the lesson, the project looks like this:
 ```
 testing-practice/
 ├── .venv/
+├── pytest.ini
 ├── requirements.txt
 ├── src/
 │   ├── calc.py

@@ -1,5 +1,5 @@
 # Challenge: Refactor with Tests 🏗️🏗️🏗️🏗️🏗️
-# Run the tests first and watch all three pass:  python3 -m pytest
+# Run the tests first and watch all three pass:  pytest
 # Then refactor double_all_purely to use a list comprehension and run the tests again.
 # If every test still passes, the comprehension does what the loop did.
 
