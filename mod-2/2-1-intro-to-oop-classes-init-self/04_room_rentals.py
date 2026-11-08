@@ -5,7 +5,7 @@
 # - fits(group_size) returns True when a group of that size has enough seats, and False otherwise.
 # Then rewrite one of the method calls at the bottom in the form Room.cost(...).
 # Run the file after each step. It runs before you start, and prints None until each method is done:
-#     python3 05_room_rentals.py
+#     python3 04_room_rentals.py
 
 
 class Room:
