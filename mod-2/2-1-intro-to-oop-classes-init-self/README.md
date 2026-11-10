@@ -3,7 +3,7 @@
 Every file in this folder follows one part of the lesson, and most of them use the lesson's `Event` class for the venue's events. Run any file with `python3`, for example:
 
 ```sh
-python3 01_how_a_method_reaches_its_value.py
+python3 01_data_types_and_classes.py
 ```
 
 The lesson's case study checks use the case study repository, `swe-casestudy-2-venue-tickets`, which you clone at the start of the lesson. Nothing in this folder depends on it.
@@ -12,8 +12,8 @@ The lesson's case study checks use the case study repository, `swe-casestudy-2-v
 
 | File | Lesson section |
 | --- | --- |
-| `01_how_a_method_reaches_its_value.py` | How a Method Reaches Its Value, Ideas 1 to 3, and Challenge: Rewrite the Call |
-| `02_classes_and_instances.py` | Classes and Instances: Defining a Class, `__init__` Gives Every Instance the Same Shape, and Data Goes on `self` |
+| `01_data_types_and_classes.py` | What is a Data Type? And What is a Class?: Every Value is an "Instance" of a "Class", `dir` Tells Us what a Class and its Instances Can Do, and Instances Find Their Methods in Their Class |
+| `02_classes_and_instances.py` | Creating your own Classes: Defining a Class, Attributes, `__init__` Gives Every Instance the Same Shape, and A Common Mistake: Data Goes on `self` |
 | `03_methods_and_self.py` | Methods and `self`: Writing a Method, `self` Is the Value Before the Dot, and A Method That Takes Arguments |
 | `04_room_rentals.py` | Challenge: Room Rentals |
 | `05_encapsulation_and_the_interface.py` | Encapsulation and the Interface: Parallel Lists Drift Apart, Dictionaries Keep the Data Together but Not the Rules, One Place for the Data and Its Rules, The Interface, and Dictionary or Class? |

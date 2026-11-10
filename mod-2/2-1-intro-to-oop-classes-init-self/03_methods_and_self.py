@@ -30,8 +30,12 @@ print(pottery.seats_left())  # 0
 
 
 # # ---------- self Is the Value Before the Dot ----------
-# # Python finds the method in the instance's class and passes the instance in as self.
+# # Python finds the method in the value's class and calls it with the value as the first argument.
 
+# print(str.upper('hello'))    # called on the class str, with 'hello' as the argument -> HELLO
+# print('hello'.upper())       # called on the string instance with no argument -> HELLO
+#
+# # # The same rule holds for the classes you write: the instance is passed in as self.
 # jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
 #
 # print(jazz.seats_left())

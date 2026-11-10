@@ -1,4 +1,4 @@
-# Classes and Instances: a class puts the data and the functions that work on it in the same place.
+# Creating your own Classes: a class defines a new type of data and the methods its instances can use.
 # Uncomment one section at a time as the lesson goes on.
 
 from datetime import date
@@ -16,13 +16,16 @@ print(type(jazz))       # <class '__main__.Event'>
 print(type(pottery))    # <class '__main__.Event'>
 print(jazz is pottery)  # False: each call to Event() makes a separate object
 
-# Attributes added one at a time, by hand
-jazz.name = 'Friday Night Jazz'
-jazz.date = date(2026, 12, 5)
 
-pottery.name = 'Intro to Pottery'
+# # ---------- Attributes ----------
+# # Attributes added one at a time, by hand. Nothing stops pottery from missing its date.
 
-# print(pottery.date)  # crashes on purpose: AttributeError: 'Event' object has no attribute 'date'
+# jazz.name = 'Friday Night Jazz'
+# jazz.date = date(2026, 12, 5)
+#
+# pottery.name = 'Intro to Pottery'
+#
+# # print(pottery.date)  # crashes on purpose: AttributeError: 'Event' object has no attribute 'date'
 
 
 # # ---------- __init__ Gives Every Instance the Same Shape ----------
@@ -50,7 +53,7 @@ pottery.name = 'Intro to Pottery'
 # print(jazz.capacity)
 
 
-# # ---------- Data Goes on self ----------
+# # ---------- A Common Mistake: Data Goes on self ----------
 # # This version forgets self. on one line, so seats_sold disappears when __init__ finishes.
 
 # class Event:
