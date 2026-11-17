@@ -42,7 +42,7 @@ class Event:
         self._seats_sold += 1
 
 
-pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 pottery.base_price = 20
 print(pottery.base_price)   # should print 20
 

@@ -21,13 +21,13 @@ class Venue:
 
 
 hall = Venue('Riverside Community Hall')
-jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
-pottery = Event('Intro to Pottery', date(2026, 12, 9), 12)
+jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
+pottery = Event('Intro to Pottery', date(2026, 12, 9), capacity=12)
 hall.add_event(jazz)
 hall.add_event(pottery)
 
 # You will often see classes instantiated directly in a method call like this
-hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15))
 
 
 # # ---------- Reaching Through One Object to Another ----------
@@ -59,9 +59,9 @@ hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
 #
 #
 # hall = Venue('Riverside Community Hall')
-# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-# hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), 12))
-# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), capacity=40))
+# hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), capacity=12))
+# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15))
 #
 # for event in hall.events_on(date(2026, 12, 5)):
 #     print(event.name)

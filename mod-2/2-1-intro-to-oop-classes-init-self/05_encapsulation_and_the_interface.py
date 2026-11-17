@@ -73,7 +73,7 @@ print(f'{names[1]}: {seats_left(1)} seats left')
 #
 #
 # # The class version: the rule is a method of the event
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2)
 # pottery.sell_ticket()
 #
 # # Read past the dunder methods at the start of the list to find what this class gave the event
@@ -87,7 +87,7 @@ print(f'{names[1]}: {seats_left(1)} seats left')
 # # ---------- The Interface ----------
 # # The interface for changing an event's seats is sell_ticket(), where the sold-out check runs.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2)
 # pottery.sell_ticket()
 # pottery.sell_ticket()
 # pottery.sell_ticket()        # Intro to Pottery is sold out.

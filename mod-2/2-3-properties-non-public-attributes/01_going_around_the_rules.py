@@ -22,7 +22,7 @@ class Event:
         self.seats_sold += 1
 
 
-pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 pottery.sell_ticket()
 pottery.sell_ticket()
 pottery.sell_ticket()        # Intro to Pottery is sold out.
@@ -38,7 +38,7 @@ pottery.sell_ticket()        # Intro to Pottery is sold out.
 # # ---------- Assigning a Wrong Value Directly ----------
 # # A staff member types 0 when they meant 10. Nothing refuses it, and the mistake shows up later.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 # pottery.sell_ticket()
 # pottery.sell_ticket()
 #
@@ -47,5 +47,5 @@ pottery.sell_ticket()        # Intro to Pottery is sold out.
 # print(pottery.seats_left())   # -3
 #
 # # # A wrong capacity from the start is accepted too:
-# empty = Event('Intro to Pottery', date(2026, 11, 20), 0, 15)
+# empty = Event('Intro to Pottery', date(2026, 11, 20), capacity=0, base_price=15)
 # print(empty.capacity)         # 0
