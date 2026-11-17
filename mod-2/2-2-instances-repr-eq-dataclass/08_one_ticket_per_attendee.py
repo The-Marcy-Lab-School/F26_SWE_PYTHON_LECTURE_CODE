@@ -52,7 +52,7 @@ class Venue:
 
 
 hall = Venue('Riverside Community Hall')
-jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 hall.add_event(jazz)
 
 hall.book(Attendee('Maya Rodriguez', 'maya@example.com'), jazz)

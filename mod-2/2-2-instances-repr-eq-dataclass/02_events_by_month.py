@@ -27,10 +27,10 @@ class Venue:
 
 
 hall = Venue('Riverside Community Hall')
-hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), 12))
-hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
-hall.add_event(Event('New Year Concert', date(2027, 1, 2), 60))
+hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), capacity=40))
+hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), capacity=12))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15))
+hall.add_event(Event('New Year Concert', date(2027, 1, 2), capacity=60))
 
 for event in hall.events_in_month(12):
     print(event.name)

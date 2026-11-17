@@ -16,7 +16,7 @@ class Event:
         return self.name == other.name and self.date == other.date
 
 
-jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 # print(jazz == 'Friday Night Jazz')  # crashes on purpose: AttributeError: 'str' object has no attribute 'name'
 
 
@@ -35,7 +35,7 @@ jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
 #         return self.name == other.name and self.date == other.date
 #
 #
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 # print(jazz == 'Friday Night Jazz')  # False
 
 

@@ -39,8 +39,8 @@ print(jazz is pottery)  # False: each call to Event() makes a separate object
 #         self.seats_sold = 0
 #
 #
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2)
 #
 # print(jazz.name)          # Friday Night Jazz
 # print(pottery.capacity)   # 2
@@ -64,6 +64,6 @@ print(jazz is pottery)  # False: each call to Event() makes a separate object
 #         seats_sold = 0
 #
 #
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 # print(jazz.name)        # Friday Night Jazz
 # # print(jazz.seats_sold)  # crashes on purpose: AttributeError: 'Event' object has no attribute 'seats_sold'

@@ -22,7 +22,7 @@ class Event:
         self.seats_sold += 1
 
 
-pottery = Event('Intro to Pottery', date(2026, 11, 20), 2)
+pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2)
 pottery.sell_ticket()
 pottery.sell_ticket()
 pottery.sell_ticket()        # Intro to Pottery is sold out.
@@ -36,7 +36,7 @@ print(pottery.seats_left())  # 0
 # print('hello'.upper())       # called on the string instance with no argument -> HELLO
 #
 # # # The same rule holds for the classes you write: the instance is passed in as self.
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 #
 # print(jazz.seats_left())
 # # finds the Event.seats_left method and invokes it with jazz as the self argument -> 40
@@ -54,12 +54,12 @@ print(pottery.seats_left())  # 0
 #         return 0
 #
 #
-# broken = BrokenEvent('Friday Night Jazz', 40)
+# broken = BrokenEvent('Friday Night Jazz', capacity=40)
 # # broken.seats_left()  # crashes on purpose: TypeError: BrokenEvent.seats_left() takes 0 positional arguments but 1 was given
 #
 # # # Predict, then run: what does this print?
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2)
 #
 # pottery.sell_ticket()
 # pottery.sell_ticket()
@@ -91,7 +91,7 @@ print(pottery.seats_left())  # 0
 #         return today < self.date
 #
 #
-# jazz = Event('Friday Night Jazz', date(2026, 12, 5), 40)
+# jazz = Event('Friday Night Jazz', date(2026, 12, 5), capacity=40)
 # today = date(2026, 11, 12)
 #
 # print(jazz.can_refund(today))          # True

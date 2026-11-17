@@ -24,8 +24,8 @@ class Venue:
 
 
 hall = Venue('Riverside Community Hall')
-hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), capacity=40))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15))
 
 # The class and a memory address, but not which event
 print(hall.events_on(date(2026, 12, 5)))
@@ -46,8 +46,8 @@ print(hall.events_on(date(2026, 12, 5)))
 #
 #
 # hall = Venue('Riverside Community Hall')
-# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), capacity=40))
+# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15))
 #
 # print(hall.events[0])     # Event('Friday Night Jazz', 2026-12-05)
 # print(hall.events)        # [Event('Friday Night Jazz', 2026-12-05), Event('Holiday Crafts', 2026-12-05)]
@@ -69,5 +69,5 @@ print(hall.events_on(date(2026, 12, 5)))
 #         print(f'Event({self.name!r}, {self.date})')    # prints instead of returning
 #
 #
-# broken = BrokenEvent('Friday Night Jazz', date(2026, 12, 5))
+# broken = BrokenEvent('Friday Night Jazz', capacity=date(2026, 12, 5))
 # # print([broken])  # crashes on purpose: TypeError: __repr__ returned non-string (type NoneType)
