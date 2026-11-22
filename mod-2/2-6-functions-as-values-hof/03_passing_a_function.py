@@ -53,11 +53,11 @@ print(hall.find_events(is_free))          # [Event('Board Game Night', 2027-01-0
 # # ---------- Predict, then run ----------
 # # This version of the test prints a line every time it runs. What does the program print, and in what order?
 
-# def is_cheap(event):
-#     print(f'Checking {event.name}')
-#     return event.ticket_price() < 10
-#
-#
+def is_cheap(event):
+    print(f'Checking {event.name}')
+    return event.ticket_price() < 10
+
+
 # cheap = hall.find_events(is_cheap)
 # print([event.name for event in cheap])
 
@@ -66,8 +66,8 @@ print(hall.find_events(is_free))          # [Event('Board Game Night', 2027-01-0
 # # For each call below, say whether it is a higher-order function, and if it is, which condition it meets:
 # # it takes a function as an argument, or it returns a function.
 
-# board_games = hall.events[3]
-#
+board_games = hall.events[3]
+
 # print(hall.find_events(is_free))   # 1.
 # print(len(hall.events))            # 2.
 # print(is_free(board_games))        # 3.

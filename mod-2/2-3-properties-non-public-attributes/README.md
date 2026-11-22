@@ -19,9 +19,9 @@ The lesson's case study checks use the case study repository, `swe-casestudy-2-v
 | `05_advanced_topics.py` | Advanced Topics |
 | `refusal-practice/` | Testing a Refusal, and Challenge: Test the Base Price |
 
-Each numbered file starts with code that runs as it is. Below it, the rest of the file is commented out in sections named after the lesson's headings. As the lesson goes on, uncomment one section at a time and run the file again. In VS Code, select the whole section, from its `# # ----------` heading to its last line, and press `Command+/` (`Ctrl+/` on Windows). The headings and explanations are commented twice, so they stay comments while the code becomes runnable.
+Each numbered file runs as it is. Below the first part, the file is divided into sections named after the lesson's headings. In each section, the definitions and other lines that print nothing are already uncommented, so they run without changing the file's output. The lines that print are commented out. As the lesson goes on, uncomment one section's printing lines at a time and run the file again. In VS Code, select only the commented lines of that section and press `Command+/` (`Ctrl+/` on Windows). A selection that includes an uncommented line comments every line instead, so leave the uncommented lines out of the selection. The explanations and expected output are commented twice, so they stay comments while the code becomes runnable.
 
-Some sections ask you to predict the output before you run them, so read the comment at the top of each section first. A few of those sections end in an error on purpose, and their comment says so: comment the section out again before you go on, so the rest of the file still runs. Lines that end with `# crashes on purpose` work the same way.
+Some sections ask you to predict the output before you run them, so read the comment at the top of each section first. A few of those sections end in an error on purpose, and their comment says so: comment those lines out again before you go on, so the rest of the file still runs. Lines that end with `# crashes on purpose` work the same way.
 
 ## Challenge: Base Price
 

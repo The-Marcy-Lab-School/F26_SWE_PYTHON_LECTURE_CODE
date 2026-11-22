@@ -37,8 +37,8 @@ hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
 # print(hall.events[1].date.month)   # 12
 #
 # # # Predict, then run: the jazz concert moves to a bigger room. What do the two print() calls show?
-# jazz.capacity = 60
-#
+jazz.capacity = 60
+
 # print(hall.events[0].capacity)
 # print(jazz is hall.events[0])
 
@@ -46,23 +46,23 @@ hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
 # # ---------- A Method That Searches the List ----------
 # # The venue holds the list, so the venue is the natural place for code that searches it.
 
-# class Venue:
-#     def __init__(self, name):
-#         self.name = name
-#         self.events = []
-#
-#     def add_event(self, event):
-#         self.events.append(event)
-#
-#     def events_on(self, day):
-#         return [event for event in self.events if event.date == day]
-#
-#
-# hall = Venue('Riverside Community Hall')
-# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-# hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), 12))
-# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
-#
+class Venue:
+    def __init__(self, name):
+        self.name = name
+        self.events = []
+
+    def add_event(self, event):
+        self.events.append(event)
+
+    def events_on(self, day):
+        return [event for event in self.events if event.date == day]
+
+
+hall = Venue('Riverside Community Hall')
+hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
+hall.add_event(Event('Intro to Pottery', date(2026, 12, 9), 12))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+
 # for event in hall.events_on(date(2026, 12, 5)):
 #     print(event.name)
 # # Friday Night Jazz

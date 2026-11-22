@@ -55,12 +55,12 @@ print(hall.find_events(matches_month(1)))   # [Event('Board Game Night', 2027-01
 # # What happens when the program calls matches_month(12)?
 # # Uncomment the last line on its own and run the file. Then comment it out again.
 
-# def matches_month(month):
-#     def matches(event):
-#         return event.date.month == month
-#     return matches()
-#
-#
+def matches_month(month):
+    def matches(event):
+        return event.date.month == month
+    return matches()
+
+
 # # in_december = matches_month(12)   # crashes on purpose
 
 
@@ -70,26 +70,26 @@ print(hall.find_events(matches_month(1)))   # [Event('Board Game Night', 2027-01
 # # 2. matches_month
 # # 3. in_december, the function that matches_month(12) returned
 
-# def matches_month(month):
-#     def matches(event):
-#         return event.date.month == month
-#     return matches
-#
-#
-# in_december = matches_month(12)
+def matches_month(month):
+    def matches(event):
+        return event.date.month == month
+    return matches
+
+
+in_december = matches_month(12)
 # print(in_december(hall.events[0]))   # True: in_december receives one event and returns True or False
 
 
 # # ---------- Closures ----------
 # # announce closes over venue_name, and keeps it after make_announcer() has returned.
 
-# def make_announcer(venue_name):
-#     def announce(message):
-#         print(f'{venue_name}: {message}')
-#     return announce
-#
-#
-# main_hall = make_announcer('Riverside Community Hall')
+def make_announcer(venue_name):
+    def announce(message):
+        print(f'{venue_name}: {message}')
+    return announce
+
+
+main_hall = make_announcer('Riverside Community Hall')
 # main_hall('Doors open at 7.')     # Riverside Community Hall: Doors open at 7.
 #
 # # print(month)   # crashes on purpose
@@ -97,19 +97,19 @@ print(hall.find_events(matches_month(1)))   # [Event('Board Game Night', 2027-01
 
 # # ---------- Q: Which is the outer function, which is the inner function, and which variable does the inner one refer to? ----------
 
-# def sort_by_distance_from(prices, target):
-#     return sorted(prices, key=lambda price: abs(price - target))
-#
-#
+def sort_by_distance_from(prices, target):
+    return sorted(prices, key=lambda price: abs(price - target))
+
+
 # print(sort_by_distance_from([8, 30, 25, 15], 20))   # [25, 15, 30, 8]
 
 
 # # ---------- Predict, then run ----------
 # # The venue also announces events in its annex. What do the three calls print?
 
-# main_hall = make_announcer('Riverside Community Hall')
-# annex = make_announcer('Riverside Annex')
-#
+main_hall = make_announcer('Riverside Community Hall')
+annex = make_announcer('Riverside Annex')
+
 # main_hall('Doors open at 7.')
 # annex('Doors open at 8.')
 # main_hall('Last call.')

@@ -55,5 +55,5 @@ print(hall.find_events(is_free))     # [Event('Board Game Night', 2027-01-08)]
 # # This time the callback is called with an argument, so no argument is missing. What happens?
 # # Uncomment the second line on its own and run the file. Then comment it out again.
 
-# board_games = hall.events[3]
+board_games = hall.events[3]
 # # hall.find_events(is_free(board_games))   # crashes on purpose

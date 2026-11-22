@@ -65,16 +65,16 @@ print(max(hall.events, key=lambda event: event.capacity))         # Event('Frida
 # # ---------- Challenge: The Event Listings ----------
 # # Finish each function using sorted(), min(), or max() with key, so the three lines print what the comments show.
 
-# def latest_first(events):
-#     return None   # 1. The events, from the latest date to the earliest
-#
-# def fewest_seats(events):
-#     return None   # 2. The event with the fewest seats
-#
-# def alphabetical(events):
-#     return None   # 3. The events in alphabetical order by name
-#
-#
+def latest_first(events):
+    return None   # 1. The events, from the latest date to the earliest
+
+def fewest_seats(events):
+    return None   # 2. The event with the fewest seats
+
+def alphabetical(events):
+    return None   # 3. The events in alphabetical order by name
+
+
 # print(latest_first(hall.events))
 # # [Event('Board Game Night', 2027-01-08), Event('Intro to Pottery', 2026-12-09), Event('Friday Night Jazz', 2026-12-05), Event('Movie Night: Coco', 2026-11-28)]
 # print(fewest_seats(hall.events))

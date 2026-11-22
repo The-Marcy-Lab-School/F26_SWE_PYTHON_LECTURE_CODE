@@ -48,9 +48,9 @@ print(hall.find_events(lambda event: 'Night' in event.name))
 # # ---------- Check for understanding ----------
 # # Rewrite each search as a single call to hall.find_events() with a lambda, in place of the None below.
 
-# capacity_30_or_more = None   # 1. The events with a capacity of 30 or more
-# in_2027 = None               # 2. The events that take place in 2027
-#
+capacity_30_or_more = None   # 1. The events with a capacity of 30 or more
+in_2027 = None               # 2. The events that take place in 2027
+
 # print(capacity_30_or_more)
 # # [Event('Friday Night Jazz', 2026-12-05), Event('Movie Night: Coco', 2026-11-28)]
 # print(in_2027)

@@ -64,22 +64,22 @@ print(len(my_playlist))    # 3: Playlist defines __len__, and inherits from neit
 # # ---------- Checking the Class or Duck Typing ----------
 # # MuseumTour was written by another team and does not inherit from Event, but it defines both methods the menu calls.
 
-# class MuseumTour:
-#     def __init__(self, name, date, price):
-#         self.name = name
-#         self.date = date
-#         self.price = price
-#
-#     def ticket_price(self):
-#         return self.price
-#
-#     def can_refund(self, today):
-#         return today < self.date
-#
-#
-# gallery = MuseumTour('Gallery After Dark', date(2026, 12, 11), price=12)
-# menu = [jazz, coco, gallery]
-#
+class MuseumTour:
+    def __init__(self, name, date, price):
+        self.name = name
+        self.date = date
+        self.price = price
+
+    def ticket_price(self):
+        return self.price
+
+    def can_refund(self, today):
+        return today < self.date
+
+
+gallery = MuseumTour('Gallery After Dark', date(2026, 12, 11), price=12)
+menu = [jazz, coco, gallery]
+
 # # Checking the class: the museum tour is skipped, even though it has both methods
 # for item in menu:
 #     if isinstance(item, Event):
@@ -101,21 +101,21 @@ print(len(my_playlist))    # 3: Playlist defines __len__, and inherits from neit
 
 # # ---------- Predict, then run ----------
 # # A botanical garden sends its own class, GardenTour. It defines ticket_price() but not can_refund().
-# # What does the menu loop print? This one ends in an error: comment the section out again before you go on.
+# # What does the menu loop print? This one ends in an error: comment those lines out again before you go on.
 
-# class GardenTour:
-#     def __init__(self, name, date, price):
-#         self.name = name
-#         self.date = date
-#         self.price = price
-#
-#     def ticket_price(self):
-#         return self.price
-#
-#
-# lanterns = GardenTour('Lantern Walk', date(2026, 12, 14), price=10)
-# menu = [jazz, gallery, lanterns, coco]
-#
+class GardenTour:
+    def __init__(self, name, date, price):
+        self.name = name
+        self.date = date
+        self.price = price
+
+    def ticket_price(self):
+        return self.price
+
+
+lanterns = GardenTour('Lantern Walk', date(2026, 12, 14), price=10)
+menu = [jazz, gallery, lanterns, coco]
+
 # for item in menu:
 #     price = item.ticket_price()
 #     marker = ' (refundable)' if item.can_refund(today) else ''
@@ -124,22 +124,22 @@ print(len(my_playlist))    # 3: Playlist defines __len__, and inherits from neit
 
 # # ---------- Q: Does this code use inheritance? Does it show polymorphism? ----------
 
-# class Dog:
-#     def __init__(self, name):
-#         self.name = name
-#
-#     def speak(self):
-#         print(f'{self.name} said woof')
-#
-#
-# class Cat:
-#     def __init__(self, name):
-#         self.name = name
-#
-#     def speak(self):
-#         print(f'{self.name} said meow')
-#
-#
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f'{self.name} said woof')
+
+
+class Cat:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f'{self.name} said meow')
+
+
 # for animal in [Dog('Snoopy'), Cat('Garfield')]:
 #     animal.speak()
 # # Snoopy said woof

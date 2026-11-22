@@ -40,61 +40,61 @@ hall.add_event(Event('Board Game Night', date(2027, 1, 8), capacity=25, base_pri
 
 # # ---------- map() and filter() ----------
 
-# cheap = list(filter(lambda event: event.ticket_price() < 10, hall.events))
-# names = list(map(lambda event: event.name, cheap))
+cheap = list(filter(lambda event: event.ticket_price() < 10, hall.events))
+names = list(map(lambda event: event.name, cheap))
 # print(names)   # ['Movie Night: Coco', 'Board Game Night']
-#
-# names = [event.name for event in hall.events if event.ticket_price() < 10]
+
+names = [event.name for event in hall.events if event.ticket_price() < 10]
 # print(names)   # ['Movie Night: Coco', 'Board Game Night']
 
 
 # # ---------- Sorting by More Than One Value ----------
 
-# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15, base_price=10))
-#
-# by_day_then_name = sorted(hall.events, key=lambda event: (event.date, event.name))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), capacity=15, base_price=10))
+
+by_day_then_name = sorted(hall.events, key=lambda event: (event.date, event.name))
 # print([event.name for event in by_day_then_name])
 # # ['Movie Night: Coco', 'Friday Night Jazz', 'Holiday Crafts', 'Intro to Pottery', 'Board Game Night']
 
 
 # # ---------- A Dictionary of Functions in Place of an if/elif Chain ----------
 
-# def list_events(venue):
-#     print([event.name for event in venue.events])
-#
-# def count_events(venue):
-#     print(len(venue.events))
-#
-# actions = {'1': list_events, '2': count_events}
-#
-# choice = '2'
+def list_events(venue):
+    print([event.name for event in venue.events])
+
+def count_events(venue):
+    print(len(venue.events))
+
+actions = {'1': list_events, '2': count_events}
+
+choice = '2'
 # actions[choice](hall)   # 5 once the section above has added Holiday Crafts, or 4 without it
 
 
 # # ---------- Changing a Closed-Over Variable with nonlocal ----------
 # # Uncomment the door() line on its own to see the error, then comment it out again.
 
-# def make_counter():
-#     count = 0
-#     def counter():
-#         count += 1
-#         return count
-#     return counter
-#
-#
-# door = make_counter()
+def make_counter():
+    count = 0
+    def counter():
+        count += 1
+        return count
+    return counter
+
+
+door = make_counter()
 # # door()   # crashes on purpose
-#
-#
-# def make_counter():
-#     count = 0
-#     def counter():
-#         nonlocal count
-#         count += 1
-#         return count
-#     return counter
-#
-#
-# door = make_counter()
-# box_office = make_counter()
+
+
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count
+        count += 1
+        return count
+    return counter
+
+
+door = make_counter()
+box_office = make_counter()
 # print(door(), door(), box_office(), door())   # 1 2 1 3

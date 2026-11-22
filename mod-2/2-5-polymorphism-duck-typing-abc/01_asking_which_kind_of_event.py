@@ -76,10 +76,10 @@ for event in [jazz, pottery, coco]:
 # # A guided tour charges its base price plus a $3 booking fee, and its tickets can be refunded until the day before.
 # # Tour is added as a subclass, and nobody edits the two functions. What do the two print() calls show?
 
-# class Tour(Event):
-#     BOOKING_FEE = 3
-#
-#
-# harbor = Tour('Harbor History Walk', date(2026, 12, 12), capacity=15, base_price=20)
+class Tour(Event):
+    BOOKING_FEE = 3
+
+
+harbor = Tour('Harbor History Walk', date(2026, 12, 12), capacity=15, base_price=20)
 # print(ticket_price(harbor))
 # print(can_refund(harbor, date(2026, 12, 1)))
