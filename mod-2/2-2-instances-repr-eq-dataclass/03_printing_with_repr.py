@@ -35,20 +35,20 @@ print(hall.events_on(date(2026, 12, 5)))
 # # ---------- __repr__ ----------
 # # Python calls __repr__ whenever it needs to show an object to a programmer.
 
-# class Event:
-#     def __init__(self, name, date, capacity):
-#         self.name = name
-#         self.date = date
-#         self.capacity = capacity
-#
-#     def __repr__(self):
-#         return f'Event({self.name!r}, {self.date})'
-#
-#
-# hall = Venue('Riverside Community Hall')
-# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-# hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
-#
+class Event:
+    def __init__(self, name, date, capacity):
+        self.name = name
+        self.date = date
+        self.capacity = capacity
+
+    def __repr__(self):
+        return f'Event({self.name!r}, {self.date})'
+
+
+hall = Venue('Riverside Community Hall')
+hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
+hall.add_event(Event('Holiday Crafts', date(2026, 12, 5), 15))
+
 # print(hall.events[0])     # Event('Friday Night Jazz', 2026-12-05)
 # print(hall.events)        # [Event('Friday Night Jazz', 2026-12-05), Event('Holiday Crafts', 2026-12-05)]
 #
@@ -60,14 +60,14 @@ print(hall.events_on(date(2026, 12, 5)))
 # # ---------- A __repr__ That Prints Instead of Returning ----------
 # # __repr__ must return its string. This one prints it and hands back None.
 
-# class BrokenEvent:
-#     def __init__(self, name, date):
-#         self.name = name
-#         self.date = date
-#
-#     def __repr__(self):
-#         print(f'Event({self.name!r}, {self.date})')    # prints instead of returning
-#
-#
-# broken = BrokenEvent('Friday Night Jazz', date(2026, 12, 5))
+class BrokenEvent:
+    def __init__(self, name, date):
+        self.name = name
+        self.date = date
+
+    def __repr__(self):
+        print(f'Event({self.name!r}, {self.date})')    # prints instead of returning
+
+
+broken = BrokenEvent('Friday Night Jazz', date(2026, 12, 5))
 # # print([broken])  # crashes on purpose: TypeError: __repr__ returned non-string (type NoneType)

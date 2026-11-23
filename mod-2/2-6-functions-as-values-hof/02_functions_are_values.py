@@ -55,15 +55,15 @@ print(check(board_games))    # True
 # # ---------- Pop quiz! Name the data type stored in each variable ----------
 # # Write down your answer for each variable first, then run the section to check.
 
-# a = 'Friday Night Jazz'
-# b = 40
-# c = True
-# d = ['A1', 'A2']
-# e = {'Main Hall': 150}
-#
-# def f(event):
-#     return event.ticket_price() == 0
-#
+a = 'Friday Night Jazz'
+b = 40
+c = True
+d = ['A1', 'A2']
+e = {'Main Hall': 150}
+
+def f(event):
+    return event.ticket_price() == 0
+
 # for value in [a, b, c, d, e, f]:
 #     print(type(value))
 
@@ -72,13 +72,13 @@ print(check(board_games))    # True
 # # The venue's announcements can be printed in two styles, and each style is a function stored in a dictionary.
 # # What do the two print() calls show?
 
-# def shout(message):
-#     return message.upper()
-#
-# def whisper(message):
-#     return message.lower()
-#
-# styles = {'shout': shout, 'whisper': whisper}
-#
+def shout(message):
+    return message.upper()
+
+def whisper(message):
+    return message.lower()
+
+styles = {'shout': shout, 'whisper': whisper}
+
 # print(styles['shout']('Doors open at 7'))
 # print(styles['whisper'])

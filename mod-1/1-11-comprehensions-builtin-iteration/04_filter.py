@@ -21,5 +21,5 @@ print(adas_purchases)
 # # ---------- Transform and Filter at Once ----------
 # # Read it from the for outward: "for each purchase in purchases, keep it if its price is over 3, and collect its item."
 
-# big_items = [purchase["item"] for purchase in purchases if purchase["price"] > 3]
+big_items = [purchase["item"] for purchase in purchases if purchase["price"] > 3]
 # print(big_items)  # ['coffee', 'coffee', 'juice']

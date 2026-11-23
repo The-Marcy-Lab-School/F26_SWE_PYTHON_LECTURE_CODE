@@ -75,16 +75,16 @@ print(len('Coco'), len(['A1', 'A2']), len({'jazz': 30}))   # 4 2 1
 # # The venue adds guided tours again: the base price plus a $3 booking fee, refundable until the day before.
 # # This time Tour defines its own ticket_price() and reuses Event's can_refund(). What does the loop print?
 
-# class Tour(Event):
-#     BOOKING_FEE = 3
-#
-#     def ticket_price(self):
-#         return super().ticket_price() + Tour.BOOKING_FEE
-#
-#
-# harbor = Tour('Harbor History Walk', date(2026, 12, 12), capacity=15, base_price=20)
-# events.append(harbor)
-#
+class Tour(Event):
+    BOOKING_FEE = 3
+
+    def ticket_price(self):
+        return super().ticket_price() + Tour.BOOKING_FEE
+
+
+harbor = Tour('Harbor History Walk', date(2026, 12, 12), capacity=15, base_price=20)
+events.append(harbor)
+
 # for event in events:
 #     price = event.ticket_price()
 #     marker = ' (refundable)' if event.can_refund(today) else ''
@@ -93,23 +93,23 @@ print(len('Coco'), len(['A1', 'A2']), len({'jazz': 30}))   # 4 2 1
 
 # # ---------- Q: How does this example show polymorphism? ----------
 
-# class Car:
-#     def __init__(self, make, model):
-#         self.make = make
-#         self.model = model
-#
-#     def drive(self):
-#         print('Vrooom')
-#
-#
-# class RaceCar(Car):
-#     def drive(self):
-#         print('Vah... Vah...')
-#         super().drive()
-#         print('WHEEEEEEE!!!!')
-#
-#
-# cars = [Car('Chevy', 'Cobalt'), RaceCar('Ferrari', 'Portofino'), Car('Tesla', 'Model X')]
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def drive(self):
+        print('Vrooom')
+
+
+class RaceCar(Car):
+    def drive(self):
+        print('Vah... Vah...')
+        super().drive()
+        print('WHEEEEEEE!!!!')
+
+
+cars = [Car('Chevy', 'Cobalt'), RaceCar('Ferrari', 'Portofino'), Car('Tesla', 'Model X')]
 # for car in cars:
 #     car.drive()
 # # Vrooom

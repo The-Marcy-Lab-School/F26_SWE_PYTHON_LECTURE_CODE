@@ -27,16 +27,16 @@ print(Seat('Balcony', 'B', 12) == Seat('Balcony', 'B', 12))  # True
 # # ---------- The Same Seat with @dataclass ----------
 # # Each attribute is listed once, with a type annotation, in the order __init__ takes them.
 
-# @dataclass
-# class Seat:
-#     section: str
-#     row: str
-#     number: int
-#
-#
-# front_row = Seat('Balcony', 'B', 12)
-# same_seat = Seat('Balcony', 'B', 12)
-#
+@dataclass
+class Seat:
+    section: str
+    row: str
+    number: int
+
+
+front_row = Seat('Balcony', 'B', 12)
+same_seat = Seat('Balcony', 'B', 12)
+
 # print(front_row)               # Seat(section='Balcony', row='B', number=12)
 # print(front_row == same_seat)  # True
 # print(front_row is same_seat)  # False

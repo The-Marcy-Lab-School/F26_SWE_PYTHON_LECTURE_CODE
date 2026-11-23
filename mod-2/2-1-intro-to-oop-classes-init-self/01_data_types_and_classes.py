@@ -12,27 +12,27 @@ print(type(['A1', 'A2']))   # <class 'list'>
 # # ---------- Every Value is an "Instance" of a "Class" ----------
 # # Calling a class creates an instance of it. Quotes are a shortcut for making a string.
 
-# favorite_number = '42'
-# boiling_point = str(212)
-#
+favorite_number = '42'
+boiling_point = str(212)
+
 # print(type(favorite_number))    # <class 'str'>
 # print(type(boiling_point))      # <class 'str'>
 #
 # # # Most other classes, such as date, can only be instantiated by calling the class:
-# knicks_victory = date(2026, 6, 13)
+knicks_victory = date(2026, 6, 13)
 # print(type(knicks_victory))     # <class 'datetime.date'>
-#
-# marcy_founded = date(2019, 9, 20)
+
+marcy_founded = date(2019, 9, 20)
 # print(type(marcy_founded))      # <class 'datetime.date'>
 
 
 # # ---------- dir Tells Us what a Class and its Instances Can Do ----------
 # # float() turns a string into a new float instance. '3.5' stands in for what input() returns.
 
-# user_input = '3.5'
+user_input = '3.5'
 # print(type(user_input))  # <class 'str'>
-#
-# user_float = float(user_input)
+
+user_float = float(user_input)
 # print(type(user_float))  # <class 'float'>
 #
 # # # dir() lists every name a value answers to. The dunder methods come first.

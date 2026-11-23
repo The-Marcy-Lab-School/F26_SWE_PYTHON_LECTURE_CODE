@@ -53,14 +53,14 @@ print(jazz.ticket_price())   # 30
 # # The venue raises the service fee for every concert, including the two already scheduled.
 # # What do the two print() lines show?
 
-# choir = Concert('Winter Choir', date(2026, 12, 19), capacity=80, base_price=10, performer='Riverside Singers')
-#
-# Concert.SERVICE_FEE = 6
-#
+choir = Concert('Winter Choir', date(2026, 12, 19), capacity=80, base_price=10, performer='Riverside Singers')
+
+Concert.SERVICE_FEE = 6
+
 # print(jazz.ticket_price())
 # print(choir.ticket_price())
-#
-# Concert.SERVICE_FEE = 5   # set the fee back, so the rest of the file uses $5
+
+Concert.SERVICE_FEE = 5   # set the fee back, so the rest of the file uses $5
 
 
 # # ---------- Attribute Lookup ----------
@@ -82,7 +82,7 @@ print(jazz.ticket_price())   # 30
 
 # # ---------- Q: A list [] holds its items, but where does a list's append() method live? ----------
 
-# seats = ['A1', 'A2']
+seats = ['A1', 'A2']
 # print('append' in dir(seats))      # True: seats can use append()
 # print('append' in list.__dict__)   # True: the list class stores it
 #
@@ -93,8 +93,8 @@ print(jazz.ticket_price())   # 30
 # # For each expression, name the places Python searches, in order, and the place where the search stops.
 # # Then run the section to confirm the values. The last line crashes on purpose: comment it out again before you go on.
 
-# coco = Screening('Movie Night: Coco', date(2026, 12, 18), capacity=30, base_price=8)
-#
+coco = Screening('Movie Night: Coco', date(2026, 12, 18), capacity=30, base_price=8)
+
 # print(jazz.performer)       # 1
 # print(jazz.ticket_price())  # 2
 # print(jazz.__repr__())      # 3

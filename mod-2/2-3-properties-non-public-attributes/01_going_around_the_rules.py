@@ -31,21 +31,21 @@ pottery.sell_ticket()        # Intro to Pottery is sold out.
 # # ---------- Changing the Seat Count Directly ----------
 # # This line never runs sell_ticket(), so the sold-out check never runs either.
 
-# pottery.seats_sold += 1
+pottery.seats_sold += 1
 # print(pottery.seats_left())   # -1
 
 
 # # ---------- Assigning a Wrong Value Directly ----------
 # # A staff member types 0 when they meant 10. Nothing refuses it, and the mistake shows up later.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
-# pottery.sell_ticket()
-# pottery.sell_ticket()
-#
-# pottery.capacity = 0
-# pottery.sell_ticket()
+pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+pottery.sell_ticket()
+pottery.sell_ticket()
+
+pottery.capacity = 0
+pottery.sell_ticket()
 # print(pottery.seats_left())   # -3
-#
+
 # # # A wrong capacity from the start is accepted too:
-# empty = Event('Intro to Pottery', date(2026, 11, 20), 0, 15)
+empty = Event('Intro to Pottery', date(2026, 11, 20), 0, 15)
 # print(empty.capacity)         # 0

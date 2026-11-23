@@ -45,15 +45,15 @@ class Reservation:
 # # ---------- Predict, then run ----------
 # # What do the four print() calls show?
 
-# hall = Venue('Riverside Community Hall')
-# hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
-#
-# maya = Attendee('Maya Rodriguez', 'maya@example.com')
-# first = Reservation(maya, hall.events[0])
+hall = Venue('Riverside Community Hall')
+hall.add_event(Event('Friday Night Jazz', date(2026, 12, 5), 40))
+
+maya = Attendee('Maya Rodriguez', 'maya@example.com')
+first = Reservation(maya, hall.events[0])
 # print(first)
 # print(first.attendee.name)
-#
-# second = Reservation(Attendee('Maya Rodriguez', 'maya@example.com'),
-#                      Event('Friday Night Jazz', date(2026, 12, 5), 60))
+
+second = Reservation(Attendee('Maya Rodriguez', 'maya@example.com'),
+                     Event('Friday Night Jazz', date(2026, 12, 5), 60))
 # print(first == second)
 # print(first.event is hall.events[0])

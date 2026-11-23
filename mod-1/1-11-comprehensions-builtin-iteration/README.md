@@ -28,7 +28,7 @@ The other files hold the lesson's examples, one file per job:
 | `08_combining_steps.py` | Combining Steps |
 | `09_advanced_topics.py` | Advanced Topics |
 
-Each of these files starts with code that runs as it is. Below it, the rest of the file is commented out in sections named after the lesson's headings. As the lesson goes on, uncomment one section at a time and run the file again. In VS Code, select the whole section, from its `# # ----------` heading to its last line, and press `Command+/` (`Ctrl+/` on Windows). The headings and explanations are commented twice, so they stay comments while the code becomes runnable.
+Each of these files runs as it is. Below the first part, the file is divided into sections named after the lesson's headings. In each section, the definitions and other lines that print nothing are already uncommented, so they run without changing the file's output. The lines that print are commented out. As the lesson goes on, uncomment one section's printing lines at a time and run the file again. In VS Code, select only the commented lines of that section and press `Command+/` (`Ctrl+/` on Windows). A selection that includes an uncommented line comments every line instead, so leave the uncommented lines out of the selection. The explanations and expected output are commented twice, so they stay comments while the code becomes runnable.
 
 Some sections ask you to predict the output before you run them, so read the comment at the top of each section first. One section in `05_reduce.py` ends with a line that crashes on purpose. Uncomment it to see the error, then comment it out again so the rest of the file still runs.
 

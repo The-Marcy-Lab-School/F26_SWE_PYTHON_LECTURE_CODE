@@ -23,16 +23,16 @@ print(first_tea)  # None
 # # ---------- A New List Shares Its Dictionaries ----------
 # # The filtered list is new, but the dictionaries inside it are the same dictionaries the source list holds.
 
-# purchases = [
-#     {"customer": "Ada", "item": "coffee", "price": 3.50},
-#     {"customer": "Zo", "item": "bagel", "price": 2.25},
-# ]
-#
-# big_purchases = [purchase for purchase in purchases if purchase["price"] > 3]
-# big_purchases[0]["price"] = 0
-#
+purchases = [
+    {"customer": "Ada", "item": "coffee", "price": 3.50},
+    {"customer": "Zo", "item": "bagel", "price": 2.25},
+]
+
+big_purchases = [purchase for purchase in purchases if purchase["price"] > 3]
+big_purchases[0]["price"] = 0
+
 # print(purchases[0])                      # {'customer': 'Ada', 'item': 'coffee', 'price': 0}
 # print(big_purchases[0] is purchases[0])  # True
 #
 # # To change the records without touching the originals, copy each one inside the comprehension.
-# copied_purchases = [dict(purchase) for purchase in purchases if purchase["price"] > 3]
+copied_purchases = [dict(purchase) for purchase in purchases if purchase["price"] > 3]
