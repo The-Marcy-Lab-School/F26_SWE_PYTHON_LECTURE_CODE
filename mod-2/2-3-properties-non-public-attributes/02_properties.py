@@ -28,7 +28,7 @@ class Event:
         self._seats_sold += 1
 
 
-pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 pottery.sell_ticket()
 print(pottery.seats_sold)      # Python runs the seats_sold getter, which returns self._seats_sold -> 1
 print(pottery.seats_left())    # 1
@@ -38,7 +38,7 @@ print(pottery.seats_left())    # 1
 # # The class defines how to read seats_sold and nothing else. What happens when code outside the class
 # # tries to add a seat directly? This one ends in an error: comment the line out again before you go on.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 # pottery.seats_sold += 1
 
 
@@ -69,7 +69,7 @@ print(pottery.seats_left())    # 1
 #         self.seats_sold += 1
 #
 #
-# broken = BrokenEvent('Intro to Pottery', date(2026, 11, 20), 2, 15)
+# broken = BrokenEvent('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 # broken.sell_ticket()
 
 
@@ -108,7 +108,7 @@ print(pottery.seats_left())    # 1
 #         self._seats_sold += 1
 #
 #
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 # pottery.capacity = 12         # a good capacity is accepted
 # print(pottery.capacity)       # 12
 #
@@ -119,5 +119,5 @@ print(pottery.seats_left())    # 1
 # # What happens when the event is created with a capacity of 0?
 # # This one ends in an error: comment the lines out again before you go on.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 0, 15)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=0, base_price=15)
 # print(pottery.name)

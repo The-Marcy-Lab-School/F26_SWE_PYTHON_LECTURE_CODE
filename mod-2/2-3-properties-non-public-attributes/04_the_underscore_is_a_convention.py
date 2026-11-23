@@ -31,7 +31,7 @@ class Event:
 
 
 # The assignment goes straight to the stored value and skips the setter, so the check never runs
-pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 pottery._capacity = -5            # no error
 print(pottery.seats_left())       # -5
 
@@ -39,6 +39,6 @@ print(pottery.seats_left())       # -5
 # # ---------- Going Through the Property ----------
 # # Code outside the class should use pottery.capacity, where the rule is checked.
 
-# pottery = Event('Intro to Pottery', date(2026, 11, 20), 2, 15)
+# pottery = Event('Intro to Pottery', date(2026, 11, 20), capacity=2, base_price=15)
 # # pottery.capacity = -5  # crashes on purpose: ValueError: Capacity must be at least 1, not -5.
 # print(pottery.capacity)           # 2

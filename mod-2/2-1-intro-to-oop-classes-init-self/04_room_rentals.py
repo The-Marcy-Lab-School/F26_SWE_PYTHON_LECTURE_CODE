@@ -19,8 +19,8 @@ class Room:
         return None  # replace with True or False
 
 
-studio = Room('Dance Studio', 25, 40)
-hall = Room('Main Hall', 200, 150)
+studio = Room('Dance Studio', seats=25, hourly_rate=40)
+hall = Room('Main Hall', seats=200, hourly_rate=150)
 
 print(studio.cost(3))     # should print 120
 print(hall.fits(180))     # should print True
