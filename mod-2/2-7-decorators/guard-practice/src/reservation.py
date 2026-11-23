@@ -1,7 +1,7 @@
 def requires_reserved(method):
     def wrapper(self):
         if self.status != 'reserved':
-            print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+            print(f'Reservation must be reserved in order to use {method.__name__}.')
             return
         return method(self)
     return wrapper
@@ -10,7 +10,7 @@ def requires_reserved(method):
 def requires_paid(method):
     def wrapper(self):
         if self.status != 'paid':
-            print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+            print(f'Reservation must be paid in order to use {method.__name__}.')
             return
         return method(self)
     return wrapper

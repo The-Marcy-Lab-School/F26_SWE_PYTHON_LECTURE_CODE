@@ -45,7 +45,7 @@ def seat_label(row, number):
 def requires_paid(method):
     def wrapper(self):
         if self.status != 'paid':
-            print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+            print(f'Reservation must be paid in order to use {method.__name__}.')
             return
         return method(self)
     return wrapper
@@ -69,7 +69,7 @@ def requires_paid(method):
     @wraps(method)                          # copies method's name onto wrapper
     def wrapper(self):
         if self.status != 'paid':
-            print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+            print(f'Reservation must be paid in order to use {method.__name__}.')
             return
         return method(self)
     return wrapper

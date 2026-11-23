@@ -6,7 +6,7 @@ def requires_status(status):        # the factory: takes the required status
     def decorator(method):          # the decorator the factory builds and returns
         def wrapper(self):          # closes over both status and method
             if self.status != status:
-                print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+                print(f'Reservation must be {status} in order to use {method.__name__}.')
                 return
             return method(self)
         return wrapper
@@ -37,9 +37,9 @@ class Reservation:
 
 
 maya = Reservation(1001, 'Maya Rodriguez')
-maya.check_in()          # Cannot check_in: reservation #1001 is reserved.
+maya.check_in()          # Reservation must be paid in order to use check_in.
 maya.pay()
-maya.pay()               # Cannot pay: reservation #1001 is paid.
+maya.pay()               # Reservation must be reserved in order to use pay.
 maya.check_in()
 print(maya.status)       # checked_in
 

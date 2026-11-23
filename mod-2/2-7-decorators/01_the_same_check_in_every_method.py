@@ -14,13 +14,13 @@ class Reservation:
 
     def pay(self):
         if self._status != 'reserved':
-            print(f'Cannot pay: reservation #{self.number} is {self._status}.')
+            print('Reservation must be reserved in order to use pay.')
             return
         self._status = 'paid'
 
     def check_in(self):
         if self._status != 'paid':
-            print(f'Cannot check_in: reservation #{self.number} is {self._status}.')
+            print('Reservation must be paid in order to use check_in.')
             return
         self._status = 'checked_in'
 
@@ -29,7 +29,7 @@ class Reservation:
 
 
 maya = Reservation(1001, 'Maya Rodriguez')
-maya.check_in()          # Cannot check_in: reservation #1001 is reserved.
+maya.check_in()          # Reservation must be paid in order to use check_in.
 maya.refund()
 print(maya.status)       # refunded
 

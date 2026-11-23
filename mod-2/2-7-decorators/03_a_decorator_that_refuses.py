@@ -6,7 +6,7 @@ def requires_paid(method):
     def wrapper(self):                      # receives the instance as self, as the method would
         if self.status != 'paid':
             # method.__name__ is the name of the method being refused, such as 'refund'
-            print(f'Cannot {method.__name__}: reservation #{self.number} is {self.status}.')
+            print(f'Reservation must be paid in order to use {method.__name__}.')
             return                          # refuses: the method's body never runs
         return method(self)                 # allowed: runs the original method
     return wrapper
@@ -32,7 +32,7 @@ class Reservation:
 
     def pay(self):
         if self._status != 'reserved':
-            print(f'Cannot pay: reservation #{self.number} is {self._status}.')
+            print('Reservation must be reserved in order to use pay.')
             return
         self._status = 'paid'
 
@@ -46,7 +46,7 @@ class Reservation:
 
 
 maya = Reservation(1001, 'Maya Rodriguez')
-maya.refund()            # Cannot refund: reservation #1001 is reserved.
+maya.refund()            # Reservation must be paid in order to use refund.
 print(maya.status)       # reserved
 
 maya.pay()
@@ -65,7 +65,7 @@ print(maya.status)       # refunded
 
 sam = Reservation(1002, 'Sam Lee')
 sam.pay()
-# sam.pay()                # Cannot pay: reservation #1002 is paid.
+# sam.pay()                # Reservation must be reserved in order to use pay.
 # print(sam.status)        # paid
 
 
